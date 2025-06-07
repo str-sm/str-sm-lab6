@@ -13,20 +13,20 @@ Instalați Jamaica 3.0:
 Testați aplicații din pachetul `edu.tucn.str.exampleslecture6`.
 
 ## Exercițiul 3
-Implementați o aplicație care să simuleze mecanismul **watchdog** prezent în cadrul unor sisteme de calcul (microcontrolere, PLC-uri etc.). 
-Pe un fir de execuție se va simula un task care rulează la un interval de timp fix (de exemplu, 2 secunde) după care va reseta watchdog-ul.
-Pentru watchdog se va folosi clasa OneShotTimer și pentru resetarea lui se va folosi metoda *reschedule()*.
+Implementați o aplicație care să simuleze mecanismul *watchdog* prezent în cadrul unor sisteme de calcul (microcontrolere, PLC-uri etc.). 
+Pe un fir de execuție se va simula un task care rulează la un interval de timp fix (de exemplu, 2 secunde) după care va reseta *watchdog*-ul.
+Pentru watchdog se va folosi clasa *OneShotTimer* și pentru resetarea lui se va folosi metoda *reschedule()*.
 După 5 rulări corecte se va simula o întârziere de 10 secunde, iar watchdog-ul va opri firul de execuție care rulează task-ul.
 
 ## Exercițiul 4
 Implementați o aplicație RT Java care folosește *PeriodicTimer* pentru a face măsurători de la un senzor de temperatură simulat, la fiecare secundă, 
 în total 20 de citiri: de fiecare dată când timer-ul se declanșează, handler-ul trebuie să obțină o valoare aleatoare de temperatură între 20 °C și 100 °C, 
-să adauge un rând în fișierul „temperature.log” în formatul *Citire [n]: XX °C la <timestamp>* și, dacă temperatura depășește 75 °C, să afișeze imediat pe System.out mesajul 
+să adauge un rând în fișierul *temperature.log* în formatul *Citire [n]: XX °C la <timestamp>* și, dacă temperatura depășește 75 °C, să afișeze imediat pe System.out mesajul 
 *WARNING: Overheating detected la Citirea [n] (XX °C)*; după cele 20 de declanșări, timer-ul trebuie să se dezactiveze automat, iar aplicația să se încheie. 
 Pentru dezactivarea time-rului se va folosi metoda *disable()*.
 
 ## Exercițiul 5
-Implementați o aplicație RT Java care creează un RealtimeThread cu PeriodicParameters astfel încât să execute un task simplu de „heartbeat” la fiecare 500 ms: atunci când pornește, 
+Implementați o aplicație RT Java care creează un RealtimeThread cu PeriodicParameters astfel încât să execute un task simplu de *heartbeat* la fiecare 500 ms: atunci când pornește, 
 thread-ul ar trebui să ruleze exact 50 de perioade, iar în fiecare perioadă să citească un număr întreg aleatoriu între 1 și 100 (simulând, de exemplu, o valoare de la un senzor), 
 să afișeze în System.out o linie de forma *Heartbeat [n]: value=<sensor> at <timestamp>*, și apoi să aștepte imediat următoarea perioadă. După ce completează 50 de perioade, 
 thread-ul ar trebui să se încheie, iar aplicația să se oprească.
