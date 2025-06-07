@@ -22,6 +22,12 @@ public class AehExample {
         event.addHandler(h);
 
         event.fire();
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+        }
+
         event.fire();
 
         System.out.println(Thread.currentThread().getName() + ": is handled? " + event.handledBy(h));

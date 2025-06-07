@@ -19,7 +19,7 @@ public class TestPeriodic {
         AsyncEventHandler handler = new AsyncEventHandler(new MyHandler());
 
         PeriodicTimer timer = new PeriodicTimer(new AbsoluteTime(
-                Clock.getRealtimeClock()), new RelativeTime(2000, 0), handler);
+                Clock.getRealtimeClock()), new RelativeTime(1000, 0), handler);
 
         System.out.println("is timer enabled? " + timer.isRunning());
         timer.start();
@@ -29,7 +29,7 @@ public class TestPeriodic {
     public static void main(String[] args) {
         new TestPeriodic().test();
         try {
-            Thread.sleep(10000);
+            Thread.sleep(10_000);
         } catch (InterruptedException e) {
         }
     }
