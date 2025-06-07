@@ -29,7 +29,7 @@ public class TestPeriodic {
     public static void main(String[] args) {
         new TestPeriodic().test();
         try {
-            Thread.sleep(10_000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
         }
     }
